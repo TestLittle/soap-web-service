@@ -1,0 +1,46 @@
+package utb.fai.soapservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ws.server.endpoint.annotation.Endpoint;
+import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
+import org.springframework.ws.server.endpoint.annotation.RequestPayload;
+import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
+
+import utb.fai.soapservice.Model.AuthorPersistent;
+import utb.fai.soapservice.Model.BookPersistent;
+
+import com.example.book_web_service.Author;
+import com.example.book_web_service.Book;
+
+import com.example.book_web_service.GetBookRequest;
+import com.example.book_web_service.GetBookResponse;
+
+// nutne nejdrive nadefinovat CreateBookRequest a Reponse v books.xsd aby se tridy vygenerovali a import byl funkci
+//import com.example.book_web_service.CreateBookRequest;
+//import com.example.book_web_service.CreateBookResponse;
+
+
+@Endpoint
+public class LibraryEndpoint {
+    private static final String NAMESPACE_URI = "http://example.com/book-web-service";
+
+    @Autowired
+    private LibraryService libraryService;
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getBookRequest")
+    @ResponsePayload
+    public GetBookResponse getBook(@RequestPayload GetBookRequest request) {
+        // TODO: implement getBook
+        return null;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "createBookRequest")
+    @ResponsePayload
+    public CreateBookResponse createBook(@RequestPayload CreateBookRequest request) {
+        // TODO: implement createBook
+        return null;
+    }
+
+    // TODO: define this requests updateBookRequest, deleteBookRequest, getAuthorRequest, createAuthorRequest, deleteAuthorRequest
+
+}
