@@ -26,7 +26,7 @@ public class LibraryEndpoint {
 
     @Autowired
     private LibraryService libraryService;
-
+/* 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getBookRequest")
     @ResponsePayload
     public GetBookResponse getBook(@RequestPayload GetBookRequest request) {
@@ -40,7 +40,7 @@ public class LibraryEndpoint {
         // TODO: implement createBook
         return null;
     }
-
+*/
     // TODO: define this requests updateBookRequest, deleteBookRequest, getAuthorRequest, createAuthorRequest, deleteAuthorRequest
 
 }
